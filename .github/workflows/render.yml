@@ -1,0 +1,38 @@
+name: Render and verify thesis examples
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  render:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        profile: [ko-master, ko-phd, en-master, en-phd]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: r-lib/actions/setup-r@v2
+      - name: Install R dependencies
+        shell: Rscript {0}
+        run: install.packages(c('knitr', 'ggplot2', 'showtext'), repos='https://cloud.r-project.org')
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: '1.6.42'
+          tinytex: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PDF verifier
+        run: python -m pip install pypdf PyYAML
+      - name: Render complete thesis
+        run: quarto render --profile ${{ matrix.profile }}
+      - name: Verify example PDF
+        run: python scripts/verify.py output/pdf/snu-thesis-${{ matrix.profile }}.pdf --profile ${{ matrix.profile }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: thesis-${{ matrix.os }}-${{ matrix.profile }}
+          path: output/pdf/*.pdf

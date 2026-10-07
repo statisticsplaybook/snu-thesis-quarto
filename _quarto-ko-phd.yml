@@ -1,0 +1,14 @@
+lang: ko-KR
+book:
+  output-file: snu-thesis-ko-phd
+  chapters:
+  - index.qmd
+  - chapters/01-introduction.qmd
+  - chapters/02-methods.qmd
+  - chapters/03-results.qmd
+  - chapters/04-discussion.qmd
+  - references.qmd
+  appendices:
+  - chapters/appendix.qmd
+thesis-language: ko
+thesis-degree: phd

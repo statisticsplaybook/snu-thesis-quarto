@@ -1,0 +1,3 @@
+This document is a Quarto starter example for writing a thesis at Seoul National University. It demonstrates how thesis metadata, manuscript chapters, and R analysis can be maintained separately and rendered into one PDF. Students enter their thesis information in a configuration file and write each chapter in a QMD file.
+
+The example uses the cars dataset distributed with R to examine the association between speed and stopping distance. Tables, figures, equations, references, and an appendix demonstrate the supported document components. These results illustrate the template and do not represent an actual thesis. Replace this abstract with the objectives, methods, results, and conclusions of your own research before submission.

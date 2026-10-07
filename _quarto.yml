@@ -1,0 +1,16 @@
+project:
+  type: book
+  output-dir: output/pdf
+  execute-dir: project
+metadata-files:
+- thesis.yml
+profile:
+  default: ko-master
+book:
+  output-file: snu-thesis
+bibliography: references.bib
+format:
+  snu-thesis-pdf: default
+execute:
+  echo: false
+  warning: false

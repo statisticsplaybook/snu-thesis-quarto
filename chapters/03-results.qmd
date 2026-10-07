@@ -1,0 +1,66 @@
+# 연구결과 {#sec-results}
+
+```{r}
+#| label: results-setup
+#| include: false
+source("scripts/analysis.R")
+```
+
+## 기술통계
+
+자료에는 `r nrow(x)`개의 관측값이 있다. 평균 속도는 `r round(mean(x$speed), 2)` mph이며, 평균 제동 거리는 `r round(mean(x$dist), 2)` ft이다.
+
+```{r}
+#| label: tbl-summary
+#| tbl-cap: "속도와 제동 거리의 기술통계"
+knitr::kable(data.frame(
+  Variable = c("Speed (mph)", "Stopping distance (ft)"),
+  Mean = c(mean(x$speed), mean(x$dist)),
+  SD = c(sd(x$speed), sd(x$dist))
+), digits = 2, booktabs = TRUE)
+```
+
+@tbl-summary 는 두 변수의 평균과 표준편차를 보여 준다.
+
+## 속도와 제동 거리
+
+```{r}
+#| label: fig-cars
+#| fig-cap: "속도와 제동 거리의 관계"
+#| fig-width: 5.1
+#| fig-height: 3.8
+#| dev: pdf
+library(ggplot2)
+
+sysfonts::font_add("snu-figure", regular = list.files(
+  "_extensions", pattern = "^NanumMyeongjo-Regular\\.ttf$",
+  recursive = TRUE, full.names = TRUE
+)[1])
+showtext::showtext_auto()
+
+ggplot(x, aes(x = speed * 0.44704, y = dist * 0.3048)) +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE,
+              colour = "#C26A38", linewidth = 0.8) +
+  geom_point(shape = 21, fill = "#39869A", colour = "#1F5263",
+             size = 2.6, stroke = 0.35, alpha = 0.85) +
+  scale_x_continuous(breaks = seq(0, 12, 2)) +
+  scale_y_continuous(breaks = seq(0, 40, 10)) +
+  coord_cartesian(xlim = c(0, 12), ylim = c(0, 40), expand = FALSE) +
+  labs(x = "속도 (m/s)", y = "제동 거리 (m)") +
+  theme_classic(base_size = 11, base_family = "snu-figure") +
+  theme(
+    aspect.ratio = 0.72,
+    panel.grid.major.y = element_line(colour = "#E8EDF0", linewidth = 0.25),
+    axis.text = element_text(colour = "#46515B"),
+    axis.title = element_text(colour = "#26343E"),
+    axis.title.x = element_text(margin = margin(t = 8)),
+    axis.title.y = element_text(margin = margin(r = 8)),
+    axis.line = element_line(colour = "#66737D", linewidth = 0.35),
+    axis.ticks = element_line(colour = "#66737D", linewidth = 0.35),
+    plot.margin = margin(6, 12, 6, 6)
+  )
+
+showtext::showtext_auto(FALSE)
+```
+
+@fig-cars 에서 속도가 증가할수록 제동 거리가 길어지는 경향을 확인할 수 있다. 속도가 1 m/s 증가할 때 제동 거리의 추정 증가량은 `r round(coef(model)[2] * 0.3048 / 0.44704, 2)` m이다. 이 값은 사용 예제의 결과이며 실제 연구의 결론으로 사용하지 않는다.

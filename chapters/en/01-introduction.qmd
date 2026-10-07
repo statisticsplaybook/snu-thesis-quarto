@@ -1,0 +1,15 @@
+# Introduction {#sec-introduction}
+
+## Background
+
+Manually copying analysis results into a manuscript can create inconsistencies between the code and the text. R provides a statistical computing environment [@r2026], and Quarto integrates executable analysis with document authoring [@quarto].
+
+This unofficial starter follows the document sequence provided by the SNU Library. Department-specific requirements must be checked before submission.
+
+## Objectives
+
+The example demonstrates how to update a manuscript and its analysis together. @sec-methods describes the methods, and @sec-results presents the results.
+
+A footnote can contain supplementary information.[^example]
+
+[^example]: This is an example footnote.

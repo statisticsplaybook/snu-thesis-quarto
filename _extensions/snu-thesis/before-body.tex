@@ -1,0 +1,56 @@
+% Cover and unsigned approval page precede the primary abstract.
+\newgeometry{left=25mm,right=25mm,top=25mm,bottom=25mm}
+\pagenumbering{gobble}
+\begin{snucover}
+\snumeta{$snu.degree-label$}
+\vspace{1.5cm}
+\snutitle{$snu.title-primary$}
+$if(snu.subtitle-primary)$\vspace{0.3cm}\snusubtitle{$snu.subtitle-primary$}$endif$
+\vspace{0.6cm}
+\snusubtitle{$snu.title-secondary$}
+\vfill
+\snumeta{$snu.graduation-date$}
+\vspace{1.5cm}
+\snusubtitle{$snu.school$}
+$if(snu.english)$\snumeta{Seoul National University}$endif$
+\vspace{0.3cm}
+\snumeta{$snu.department$}
+\vspace{0.4cm}
+\snusubtitle{$snu.name$}
+\vspace{0.5cm}
+\end{snucover}
+\begin{snucover}
+\snutitle{$snu.title-primary$}
+$if(snu.subtitle-primary)$\vspace{0.2cm}\snusubtitle{$snu.subtitle-primary$}$endif$
+\vspace{0.6cm}
+\snumeta{$snu.advisor-label$ $snu.advisor$}
+\vspace{0.5cm}
+\snusubtitle{$snu.submission-text$}
+\snumeta{$snu.submission-date$}
+\vspace{0.5cm}
+\snusubtitle{$snu.school$}
+$if(snu.english)$\snumeta{Seoul National University}$endif$
+\snumeta{$snu.department$}
+\snumeta{$snu.name$}
+\vspace{0.6cm}
+\snusubtitle{$snu.confirmation-text$}
+\snumeta{$snu.approval-date$}
+\vspace{0.5cm}
+{\fontsize{11}{15}\selectfont
+\begin{tabular}{lll}
+$for(snu.committee)$
+\snucommittee{$snu.committee.role$}{$snu.committee.name$}{$snu.seal-label$}
+$endfor$
+\end{tabular}}
+\vfill
+\end{snucover}
+\restoregeometry
+\pagenumbering{roman}
+\setstretch{$linestretch$}
+\chapter*{$snu.abstract-primary-label$}
+$snu.abstract-primary$
+\begin{samepage}
+\par\vspace{1em}\noindent\textbf{$snu.keywords-label$}: $snu.keywords-primary$\par
+\noindent $snu.student-number-label$: $snu.student-number$\par
+\end{samepage}
+\clearpage

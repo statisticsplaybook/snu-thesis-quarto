@@ -1,0 +1,37 @@
+# Results {#sec-results}
+
+```{r}
+#| label: results-setup
+#| include: false
+source("scripts/analysis.R")
+```
+
+## Descriptive statistics
+
+The dataset contains `r nrow(x)` observations. Mean speed is `r round(mean(x$speed), 2)` mph, and mean stopping distance is `r round(mean(x$dist), 2)` ft.
+
+```{r}
+#| label: tbl-summary
+#| tbl-cap: "Descriptive statistics for speed and stopping distance"
+knitr::kable(data.frame(
+  Variable = c("Speed (mph)", "Stopping distance (ft)"),
+  Mean = c(mean(x$speed), mean(x$dist)),
+  SD = c(sd(x$speed), sd(x$dist))
+), digits = 2, booktabs = TRUE)
+```
+
+@tbl-summary presents the mean and standard deviation of both variables.
+
+## Speed and stopping distance
+
+```{r}
+#| label: fig-cars
+#| fig-cap: "Speed and stopping distance"
+#| fig-width: 5
+#| fig-height: 3.5
+plot(x$speed, x$dist, pch = 19, col = "#333333",
+     xlab = "Speed (mph)", ylab = "Stopping distance (ft)")
+abline(model, col = "#333333", lwd = 2)
+```
+
+@fig-cars shows that stopping distance tends to increase with speed. The estimated slope is `r round(coef(model)[2], 2)`. These results illustrate the template and are not findings from an actual thesis.

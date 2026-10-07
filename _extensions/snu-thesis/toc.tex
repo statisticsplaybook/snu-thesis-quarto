@@ -1,0 +1,15 @@
+$if(snu.korean)$\renewcommand{\snuchapterformat}{제 \thechapter\ 장}$endif$
+\renewcommand{\contentsname}{$snu.contents-label$}
+\renewcommand{\listtablename}{$snu.tables-label$}
+\renewcommand{\listfigurename}{$snu.figures-label$}
+\renewcommand{\chaptername}{$snu.chapter-label$}
+\renewcommand{\tablename}{$snu.table-label$}
+\renewcommand{\figurename}{$snu.figure-label$}
+$if(toc)$
+\setcounter{tocdepth}{$toc-depth$}
+\tableofcontents
+\clearpage
+$endif$
+$if(lot)$\listoftables\clearpage$endif$
+$if(lof)$\listoffigures\clearpage$endif$
+\pagenumbering{arabic}

@@ -1,0 +1,17 @@
+# Additional analysis {#sec-appendix}
+
+```{r}
+#| label: appendix-setup
+#| include: false
+source("scripts/analysis.R")
+```
+
+Appendices follow the bibliography and precede the Korean abstract.
+
+```{r}
+#| label: tbl-coefficients
+#| tbl-cap: "Regression coefficients"
+knitr::kable(data.frame(
+  Term = names(coef(model)), Estimate = unname(coef(model))
+), digits = 3, booktabs = TRUE)
+```

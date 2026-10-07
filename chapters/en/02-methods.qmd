@@ -1,0 +1,20 @@
+# Methods {#sec-methods}
+
+## Data
+
+The analysis uses the cars dataset distributed with R. Speed is measured in miles per hour, and stopping distance is measured in feet. Each chapter reads the shared analysis script into its own R session.
+
+```{r}
+#| label: prepare-data
+source("scripts/analysis.R")
+```
+
+## Statistical model
+
+The relationship between speed and stopping distance is represented by a simple linear regression:
+
+$$
+\operatorname{dist}_i = \beta_0 + \beta_1\operatorname{speed}_i + \epsilon_i
+$$ {#eq-regression}
+
+The coefficients of @eq-regression are estimated using ordinary least squares.

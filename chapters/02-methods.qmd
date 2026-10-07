@@ -1,0 +1,21 @@
+# 연구방법 {#sec-methods}
+
+## 자료
+
+R에 기본으로 포함된 `cars` 자료를 사용한다. `speed`는 속도(mph), `dist`는 제동 거리(ft)를 나타낸다. 모든 코드 청크는 프로젝트 폴더를 기준으로 실행된다.
+
+```{r}
+#| label: prepare-data
+source("scripts/analysis.R")
+```
+
+## 분석 모형
+
+속도와 제동 거리의 관계를 단순선형회귀모형으로 표현한다.
+
+$$
+\operatorname{dist}_i = \beta_0 + \beta_1\operatorname{speed}_i + \epsilon_i
+$$ {#eq-regression}
+
+@eq-regression 의 계수는 최소제곱법으로 추정한다.
+

@@ -1,0 +1,24 @@
+\clearpage
+\chapter*{$snu.abstract-secondary-label$}
+\addcontentsline{toc}{chapter}{$snu.abstract-secondary-label$}
+\begin{center}
+\snutitle{$snu.title-secondary$}
+$if(snu.subtitle-secondary)$\snusubtitle{$snu.subtitle-secondary$}$endif$
+\vspace{0.6cm}
+\snuabstractmeta{$snu.name-secondary$}
+\snuabstractmeta{$snu.department-secondary$}
+\snuabstractmeta{$snu.school-secondary$}
+$if(snu.korean)$\snuabstractmeta{Seoul National University}$endif$
+\end{center}
+\vspace{0.5cm}
+$snu.abstract-secondary$
+\begin{samepage}
+\par\vspace{1em}\noindent\textbf{$snu.keywords-secondary-label$}: $snu.keywords-secondary$\par
+\noindent $snu.student-number-secondary-label$: $snu.student-number$\par
+\end{samepage}
+$if(snu.acknowledgements)$
+\clearpage
+\chapter*{$snu.acknowledgements-label$}
+\addcontentsline{toc}{chapter}{$snu.acknowledgements-label$}
+$snu.acknowledgements$
+$endif$

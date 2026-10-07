@@ -1,0 +1,17 @@
+# 추가 분석 {#sec-appendix}
+
+```{r}
+#| label: appendix-setup
+#| include: false
+source("scripts/analysis.R")
+```
+
+본문을 보완하는 자료를 부록에 작성한다. 부록은 참고문헌 다음, 외국어 초록 전에 출력된다.
+
+```{r}
+#| label: tbl-coefficients
+#| tbl-cap: "회귀모형의 계수"
+knitr::kable(data.frame(
+  Term = names(coef(model)), Estimate = unname(coef(model))
+), digits = 3, booktabs = TRUE)
+```

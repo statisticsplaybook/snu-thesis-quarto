@@ -1,0 +1,51 @@
+title: SNU Thesis
+author: SNU Thesis Quarto contributors
+version: 0.1.0
+quarto-required: '>=1.6.0'
+contributes:
+  formats:
+    pdf:
+      documentclass: report
+      # ko.TeX handles Korean; Babel supplies English hyphenation for Latin text.
+      babel-lang: english
+      pdf-engine: xelatex
+      fontsize: 11pt
+      mainfont: lmroman10-regular.otf
+      mainfontoptions:
+        - BoldFont=lmroman10-bold.otf
+        - ItalicFont=lmroman10-italic.otf
+        - BoldItalicFont=lmroman10-bolditalic.otf
+      sansfont: lmsans10-regular.otf
+      sansfontoptions:
+        - BoldFont=lmsans10-bold.otf
+      monofont: lmmono10-regular.otf
+      geometry:
+        - paperwidth=190mm
+        - paperheight=260mm
+        - left=30mm
+        - right=30mm
+        - top=35mm
+        - bottom=30mm
+        - headheight=15mm
+        - footskip=15mm
+      indent: true
+      linestretch: 1.7
+      number-sections: true
+      toc: true
+      toc-depth: 2
+      lot: true
+      lof: true
+      colorlinks: false
+      cite-method: citeproc
+      keep-tex: true
+      filters:
+        - thesis.lua
+      include-in-header:
+        - typography.tex
+      template-partials:
+        - before-body.tex
+        - toc.tex
+        - after-body.tex
+      format-resources:
+        - fonts/NanumMyeongjo-Regular.ttf
+        - fonts/NanumMyeongjo-Bold.ttf

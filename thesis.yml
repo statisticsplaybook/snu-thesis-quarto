@@ -1,0 +1,48 @@
+# 학생은 이 파일과 QMD 본문을 수정합니다. 날짜는 예시이며 실제 심사계획에 맞추세요.
+thesis:
+  # 논문 언어와 석사/박사 선택은 _quarto-*.yml 프로필에서 관리합니다.
+  title-ko: '재현 가능한 데이터 분석을 위한 Quarto 기반 학위논문 작성'
+  title-en: 'Writing a Quarto-Based Thesis for Reproducible Data Analysis'
+  subtitle-ko: 'R 분석 결과와 문서 서식의 통합'
+  subtitle-en: 'Integrating R Analysis and Document Formatting'
+  name-ko: '홍길동'
+  name-en: 'Gildong Hong'
+  student-number: '2025-00000'
+  school-ko: '서울대학교 대학원'
+  school-en: 'The Graduate School'
+  department-ko: '통계학과'
+  department-en: 'Department of Statistics'
+  degree-field-ko: '이학'
+  degree-field-en: 'Science'
+  advisor-ko: '박민수'
+  advisor-en: 'Minsu Park'
+  graduation-date: '2027-02'
+  submission-date: '2026-12'
+  approval-date: '2027-01'
+  # 학교 Word 예제의 6개 기준을 기본값으로 사용. 작성요령은 최대 8개까지 안내.
+  max-keywords: 6
+  keywords-ko: [재현성, 데이터 분석, Quarto, R, 학위논문]
+  keywords-en: [reproducibility, data analysis, Quarto, R, thesis]
+  abstract-ko: abstracts/ko.qmd
+  abstract-en: abstracts/en.qmd
+  # 감사의 글이 필요하면 QMD 파일 경로를 입력하세요.
+  acknowledgements: ''
+  # 순서: 위원장, 부위원장, 일반 위원. 지도교수는 반드시 마지막에 배치.
+  committee-master:
+    - name-ko: '김영희'
+      name-en: 'Younghee Kim'
+    - name-ko: '이철수'
+      name-en: 'Cheolsu Lee'
+    - name-ko: '박민수'
+      name-en: 'Minsu Park'
+  committee-phd:
+    - name-ko: '김영희'
+      name-en: 'Younghee Kim'
+    - name-ko: '이철수'
+      name-en: 'Cheolsu Lee'
+    - name-ko: '최서연'
+      name-en: 'Seoyeon Choi'
+    - name-ko: '정지훈'
+      name-en: 'Jihoon Jung'
+    - name-ko: '박민수'
+      name-en: 'Minsu Park'

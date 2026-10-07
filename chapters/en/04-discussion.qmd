@@ -1,0 +1,9 @@
+# Discussion and conclusions {#sec-discussion}
+
+## Discussion
+
+Managing the code and manuscript in one project allows tables, figures, and numerical results to be regenerated together. Researchers must separately evaluate the validity of their analyses.
+
+## Conclusions
+
+This example is a starting point for rendering thesis metadata and chapters to PDF. Replace the example title, names, abstracts, data, and manuscript with your own research before submission.

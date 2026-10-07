@@ -1,0 +1,14 @@
+lang: en
+book:
+  output-file: snu-thesis-en-master
+  chapters:
+  - index.qmd
+  - chapters/en/01-introduction.qmd
+  - chapters/en/02-methods.qmd
+  - chapters/en/03-results.qmd
+  - chapters/en/04-discussion.qmd
+  - chapters/en/references.qmd
+  appendices:
+  - chapters/en/appendix.qmd
+thesis-language: en
+thesis-degree: master

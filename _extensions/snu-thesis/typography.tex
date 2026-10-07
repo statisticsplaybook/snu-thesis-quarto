@@ -1,0 +1,21 @@
+% Original SNU-compatible typography; Korean fonts licensed under OFL-1.1.
+\usepackage{kotex}
+\setmainhangulfont{NanumMyeongjo-Regular.ttf}[BoldFont=NanumMyeongjo-Bold.ttf]
+\setsanshangulfont{NanumMyeongjo-Regular.ttf}[BoldFont=NanumMyeongjo-Bold.ttf]
+\setmonohangulfont{NanumMyeongjo-Regular.ttf}[BoldFont=NanumMyeongjo-Bold.ttf]
+\usepackage{titlesec}
+\newcommand{\snuchapterformat}{\chaptername\ \thechapter}
+\titleformat{\chapter}[display]{\normalfont\bfseries\fontsize{16}{22}\selectfont}{\snuchapterformat}{8pt}{}
+\titlespacing*{\chapter}{0pt}{0pt}{24pt}
+\titleformat{\section}{\normalfont\bfseries\fontsize{14}{20}\selectfont}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\bfseries\fontsize{12}{18}\selectfont}{\thesubsection}{1em}{}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0pt}
+\pagestyle{plain}
+\raggedbottom
+\newenvironment{snucover}{\clearpage\thispagestyle{empty}\begingroup\centering\setstretch{1.15}}{\par\endgroup\clearpage}
+\newcommand{\snutitle}[1]{{\bfseries\fontsize{22}{28}\selectfont #1\par}}
+\newcommand{\snusubtitle}[1]{{\fontsize{16}{22}\selectfont #1\par}}
+\newcommand{\snuabstractmeta}[1]{{\fontsize{11}{16}\selectfont #1\par}}
+\newcommand{\snumeta}[1]{{\fontsize{14}{20}\selectfont #1\par}}
+\newcommand{\snucommittee}[3]{#1 & \makebox[5cm][c]{#2} & #3 \\[0.45cm]}
