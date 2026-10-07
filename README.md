@@ -89,7 +89,7 @@ Quarto 템플릿 복사는 `README.md`, `LICENSE`, 숨김 파일 등을 제외�
 
 ## 검증과 유지보수
 
-`.github/workflows/render.yml`은 Windows, macOS, Linux에서 네 프로필의 출력을 검증하도록 준비되어 있습니다. GitHub에 올린 뒤 실제 실행 결과를 확인해야 합니다. 로컬 검증 내용은 `docs/VALIDATION.md`, 서식 비교와 출처는 `docs/SOURCES.md`를 보세요.
+`.github/workflows/render.yml`은 Windows, macOS, Linux에서 네 프로필의 출력을 검증하도록 준비되어 있습니다. [GitHub Actions](https://github.com/statisticsplaybook/snu-thesis-quarto/actions)에서 실행 결과를 확인할 수 있습니다. 로컬 검증 내용은 `docs/VALIDATION.md`, 서식 비교와 출처는 `docs/SOURCES.md`를 보세요.
 
 검증 스크립트는 PDF의 페이지 크기, 표지·인준지 수, 심사위원 수, 초록·참고문헌·부록 순서, 실제 R 결과, 교차참조 등을 확인합니다. 자동 검증과 별도로 제목이 긴 경우 표지와 인준지가 한 페이지에 들어가는지 시각적으로 확인해야 합니다. 예제 초록은 사용법 설명을 위한 짧은 문서이며 제출용 초록 분량 요건의 검증 대상은 아닙니다.
 

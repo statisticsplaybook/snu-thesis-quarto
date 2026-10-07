@@ -29,7 +29,9 @@
 
 로컬 템플릿 ZIP에 대해 `quarto use template /경로/template.zip --no-prompt`를 실행했습니다. 확장 기능, QMD, 설정 파일, 글꼴이 새 폴더에 설치되는 것을 확인했습니다. 한글과 공백이 들어간 폴더에서 캐시 없이 `quarto render --quiet`를 실행하여 기본 국문 석사 PDF를 생성했습니다.
 
-이 검증은 현재 macOS의 새 프로젝트 폴더에서 수행했으며, 운영체제 전체를 새로 설치한 환경의 검증은 아닙니다. GitHub에 업로드하지 않았으므로 GitHub URL을 통한 다운로드와 GitHub Actions 실행은 아직 검증하지 않았습니다.
+공개 저장소 `statisticsplaybook/snu-thesis-quarto`에서 `quarto use template statisticsplaybook/snu-thesis-quarto --no-prompt`로 새 프로젝트를 만들었습니다. 원격 다운로드·확장 및 글꼴 복사·기본 국문 석사 PDF 출력과 제공 검증 스크립트 통과(15쪽)를 확인했습니다. PDF 전체 페이지도 이미지로 확인했습니다. 이 검증은 현재 macOS의 새 프로젝트 폴더에서 수행했으며, 운영체제 전체를 새로 설치한 환경의 검증은 아닙니다.
+
+GitHub Actions의 세 운영체제·네 프로필 검증은 [실행 목록](https://github.com/statisticsplaybook/snu-thesis-quarto/actions)에서 확인합니다. 저장소 공개 시 자동 검증 실행을 시작했으며 결과는 실행별 상태를 따릅니다.
 
 ## 입력 오류 검증
 
@@ -41,7 +43,7 @@
 
 ## 운영체제 검증 범위
 
-macOS 로컬 실행은 완료했습니다. Windows와 Linux는 `.github/workflows/render.yml`에 검증 설정만 준비되어 있으며 **실제 실행 결과는 아직 없습니다**. 저장소 공개 후 세 운영체제와 네 프로필의 실행 결과를 확인해야 합니다. 학생의 실제 연구 코드에 필요한 R 패키지는 별도 관리가 필요합니다.
+macOS 로컬 실행과 공개 저장소에서 받은 시작 프로젝트 출력은 완료했습니다. Windows·Linux·macOS의 네 프로필은 `.github/workflows/render.yml`로 자동 검증하며, 운영체제별 통과 여부는 GitHub Actions의 해당 실행 결과를 확인합니다. 학생의 실제 연구 코드에 필요한 R 패키지는 별도 관리가 필요합니다.
 
 ## 환경에서 발견한 사항
 
