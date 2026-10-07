@@ -68,3 +68,5 @@ python scripts/verify.py output/pdf/snu-thesis-ko-master.pdf --profile ko-master
 ## 공개 저장소 첫 자동 검증에서 보완한 사항
 
 새 Windows R 환경에서 `rmarkdown`이 누락되어 knitr 실행이 중단되는 것을 확인해 설치 안내와 CI 의존성에 추가했습니다. macOS의 TinyTeX 설치에서는 GitHub 릴리스 조회가 HTTP 403으로 실패해, Quarto 1.6.42가 사용하는 `GH_TOKEN`에 워크플로의 읽기 전용 GitHub 토큰을 전달하도록 보완했습니다. 실제 토큰을 저장소에 저장하지 않습니다.
+
+후속 자동 검증에서는 macOS 네 프로필과 Windows의 국문 박사·영문 두 프로필이 통과했습니다. Linux에서는 R 패키지의 시스템 개발 라이브러리 누락, Windows 국문 석사에서는 ko.TeX 패키지 검색 실패가 확인되었습니다. CI에 Linux 개발 라이브러리와 `collection-langkorean` 설치 단계를 추가했습니다. 전체 운영체제 통과 여부는 수정 후 실행 결과를 확인합니다.
