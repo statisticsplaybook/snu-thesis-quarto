@@ -1,7 +1,7 @@
 # 서울대 논문 PDF 만들기
 
 1. Quarto와 R을 설치하고 이 프로젝트 폴더를 Positron에서 엽니다.
-2. 터미널에서 최초 한 번 `quarto install tinytex`와 `Rscript -e 'install.packages(c("knitr", "ggplot2", "showtext"), repos="https://cloud.r-project.org")'`를 실행합니다. 이미 설치했으면 생략합니다.
+2. 터미널에서 최초 한 번 `quarto install tinytex`와 `Rscript -e 'install.packages(c("knitr", "rmarkdown", "ggplot2", "showtext"), repos="https://cloud.r-project.org")'`를 실행합니다. 이미 설치했으면 생략합니다.
 3. `quarto render`를 실행합니다. 예제 PDF는 `output/pdf/snu-thesis-ko-master.pdf`입니다.
 4. `thesis.yml`의 제목·이름·학과·학위·날짜·심사위원을 수정합니다.
 5. `abstracts/`의 초록과 `chapters/`의 본문, `references.bib`를 교체합니다.

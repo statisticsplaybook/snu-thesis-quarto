@@ -23,11 +23,11 @@ quarto use template statisticsplaybook/snu-thesis-quarto
 
 ```bash
 quarto install tinytex
-Rscript -e 'install.packages(c("knitr", "ggplot2", "showtext"), repos="https://cloud.r-project.org")'
+Rscript -e 'install.packages(c("knitr", "rmarkdown", "ggplot2", "showtext"), repos="https://cloud.r-project.org")'
 quarto render
 ```
 
-이미 TeX Live/MacTeX와 knitr·ggplot2·showtext가 설치되어 있으면 해당 설치는 생략할 수 있습니다. 첫 출력에서는 인터넷 연결이 필요할 수 있습니다. Quarto는 TinyTeX/TeX Live의 누락된 LaTeX 패키지를 자동 설치합니다.
+이미 TeX Live/MacTeX와 knitr·rmarkdown·ggplot2·showtext가 설치되어 있으면 해당 설치는 생략할 수 있습니다. 첫 출력에서는 인터넷 연결이 필요할 수 있습니다. Quarto는 TinyTeX/TeX Live의 누락된 LaTeX 패키지를 자동 설치합니다.
 
 기본 출력은 `output/pdf/snu-thesis-ko-master.pdf`입니다. **프로젝트 전체를 출력**해야 하므로, 터미널의 `quarto render`를 권합니다. 장 하나만 출력하면 다른 장의 교차참조가 포함되지 않을 수 있습니다.
 
